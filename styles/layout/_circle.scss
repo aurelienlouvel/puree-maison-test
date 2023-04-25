@@ -1,0 +1,45 @@
+.circle {
+  position: fixed;
+  z-index: 1000;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: 16vw;
+  height: 16vw;
+  border-radius: 50%;
+  border: 1.4vw solid $color-black;
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.hidden {
+      transform: translate(-50%, -40%) scale(0);
+      transition: transform 1s ease-in-out;
+    }
+  }
+
+  svg {
+    opacity: 0;
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -49%);
+    animation: rotateSmiley 20s linear infinite;
+    transition: 0;
+
+    &.reveal {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+  }
+}
+
+@keyframes rotateSmiley {
+  100% {
+    transform: translate(-50%, -49%) rotate(-1turn);
+  }
+}

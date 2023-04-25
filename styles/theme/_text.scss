@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Spektra";
+  src: url("assets/fonts/spektra/spektra-condensed-bold.woff2") format("woff2"),
+    url("assets/fonts/spektra/spektra-condensed-bold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Rebond Grotesque";
+  src: url("assets/fonts/rebond-grotesque/rebond-grotesque-regular.woff2")
+      format("woff2"),
+    url("assets/fonts/rebond-grotesque/rebond-grotesque-regular.woff")
+      format("woff");
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Spektra", sans-serif;
+  font-size: 18vw;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+
+  //LINE HEIGHT ISSUE
+  line-height: 1.1;
+  margin-top: -0.6ch;
+
+  transform: scaleY(0);
+  transition: 0;
+
+  &.reveal {
+    transform: scaleY(1);
+    transition: transform 1s ease-in-out;
+  }
+}
+
+h2 {
+  font-family: "Spektra", sans-serif;
+  font-size: 8vw;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+
+  //LINE HEIGHT ISSUE
+  line-height: 1;
+  margin-top: -0.4ch;
+}
+
+h3 {
+  font-family: "Rebond Grotesque", sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-weight: normal;
+  line-height: 1;
+}
+
+h4 {
+  font-family: "Rebond Grotesque", sans-serif;
+  font-size: clamp(0.875rem, 1vw, 1.125rem);
+  font-weight: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
